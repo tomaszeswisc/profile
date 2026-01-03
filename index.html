@@ -1,77 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hilton Elias - Sobre Mim</title>
-    <link rel="icon" href="favicon.ico" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="foto.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Hilton Elias | Perfil Profissional</title>
+  <meta name="description" content="Perfil profissional de Hilton Elias Tomaszeswisc dos Santos: tecnologia, educação, inovação, robótica educativa, impressão 3D, desenvolvimento e pesquisa." />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonte (mais moderna e profissional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (seus ícones precisam disso) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-    <header>
-        <video autoplay loop muted>
-            <source src="header.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos em HTML5.
-        </video>
-        <img src="foto.png" alt="Foto de Hilton Elias" class="profile-img">
-        <div class="header-content">
-            <h1>Hilton Elias Tomaszeswisc dos Santos</h1>
-            <ul>
-            <li>Mestrando em Engenharia Elétrica;</li>
-            <li>Bacharel em Ciências da Computação;</li>
-            <li>Bacharel em Ciências Contábeis</li>
-            <li>Pós-Graduação em Desenvolvimento Full Stack</li>
-            <li>Pós-Graduação em Desenvolvimento Moblie</li>
+  <header class="hero" aria-label="Cabeçalho com apresentação">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="header.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+      <img src="foto.png" alt="Foto de Hilton Elias" class="profile-img" />
+
+      <div class="hero-content">
+        <h1>Hilton Elias Tomaszeswisc dos Santos</h1>
+        <p class="tagline">Tecnologia, educação e inovação aplicadas à formação técnica e ao desenvolvimento de soluções reais.</p>
+
+        <ul class="chips" aria-label="Formação acadêmica e especializações">
+          <li>Mestrando em Engenharia Elétrica</li>
+          <li>Bacharel em Ciência da Computação</li>
+          <li>Bacharel em Ciências Contábeis</li>
+          <li>Pós-graduação em Desenvolvimento Full Stack</li>
+          <li>Pós-graduação em Desenvolvimento Mobile</li>
         </ul>
-            <p>Bem-vindo ao meu espaço online!</p> 
-            <p>Aqui compartilho minha trajetória, projetos e conhecimentos.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contato"><i class="fa-solid fa-paper-plane"></i> Entrar em contato</a>
+          <a class="btn btn-ghost" href="#projetos"><i class="fa-solid fa-folder-open"></i> Ver projetos</a>
         </div>
-    </header>
-    
-    <section class="about">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sobre -->
+    <section class="section" id="sobre" aria-label="Seção Sobre Mim">
+      <div class="section-head">
         <h2>Sobre Mim</h2>
-        <p>Atualmente sou:</p> 
-        <p>Gerente de Produção da TRON - Ensino de Robótica Educativa;</p> 
-        <p>CEO da HE Technology Solutions;</p> 
-        <p>Instrutor no SENAI-PI.</p>
-        <span>Sou especialista em:</span>
-        <ul>
+        <p class="subtitle">
+          Atuo na interseção entre tecnologia, educação e inovação, com foco em soluções aplicadas, formação profissional e pesquisa.
+        </p>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Atuação atual</h3>
+          <ul class="list">
+            <li><strong>Gerente de Produção</strong> — TRON Robótica Educativa</li>
+            <li><strong>CEO</strong> — HE Technology Solutions</li>
+            <li><strong>Instrutor Técnico</strong> — SENAI Piauí</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Resumo profissional</h3>
+          <p class="text">
+            Trabalho com desenvolvimento de soluções em software e tecnologia aplicada, criação de materiais didáticos e formação técnica,
+            além de projetos de manufatura aditiva (impressão 3D) e robótica educativa. No mestrado, desenvolvo pesquisa com foco em análise
+            de vibrações, acelerometria e processamento de sinais para estimativas físicas em sistemas confinados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section class="section" id="especialidades" aria-label="Seção de Especialidades">
+      <div class="section-head">
+        <h2>Áreas de Atuação e Especialização</h2>
+        <p class="subtitle">Competências técnicas e áreas onde atuo com maior profundidade.</p>
+      </div>
+
+      <div class="grid three">
+        <div class="card">
+          <h3><i class="fa-solid fa-robot"></i> Robótica & Educação</h3>
+          <ul class="list">
             <li>Robótica Educativa</li>
+            <li>Metodologias de ensino técnico</li>
+            <li>Projetos didáticos e trilhas de aprendizagem</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-cubes"></i> Impressão 3D</h3>
+          <ul class="list">
             <li>Manufatura Aditiva (Modelagem e Impressão 3D)</li>
-            <li>Manutenção em Impressoras 3D</li>
-            <li>Manutenção em Notebooks e Micro Computadores</li>
-            <li>Eletrônica</li>
+            <li>Manutenção e calibração de impressoras 3D</li>
+            <li>Aplicações em prototipagem e peças funcionais</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-code"></i> Software & Tecnologia</h3>
+          <ul class="list">
             <li>Desenvolvimento de Software</li>
-            <li>Programação Full-Stack</li>
-            <li>Ensino Técnico</li>
-        </ul>
+            <li>Programação Full Stack</li>
+            <li>Boas práticas, arquitetura e documentação</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-microchip"></i> Eletrônica</h3>
+          <ul class="list">
+            <li>Eletrônica aplicada</li>
+            <li>Instrumentação e sensores</li>
+            <li>Integração hardware–software</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Manutenção</h3>
+          <ul class="list">
+            <li>Manutenção de notebooks e microcomputadores</li>
+            <li>Diagnóstico e boas práticas</li>
+            <li>Rotinas de padronização e organização</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fa-solid fa-chart-line"></i> Pesquisa & Dados</h3>
+          <ul class="list">
+            <li>Processamento de sinais</li>
+            <li>Análise de vibrações</li>
+            <li>Modelagem matemática aplicada</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    
-    <section class="projects">
+
+    <!-- Pesquisa -->
+    <section class="section" id="pesquisa" aria-label="Seção de Pesquisa">
+      <div class="section-head">
+        <h2>Áreas de Interesse em Pesquisa</h2>
+        <p class="subtitle">Linhas e tópicos que direcionam estudos e projetos acadêmicos.</p>
+      </div>
+
+      <div class="card">
+        <ul class="pill-list">
+          <li>Processamento de Sinais</li>
+          <li>Análise de Vibrações</li>
+          <li>Acelerometria e Sensoriamento</li>
+          <li>Instrumentação</li>
+          <li>Modelagem Matemática</li>
+          <li>Manufatura Aditiva aplicada à Engenharia</li>
+          <li>Educação Tecnológica</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos" aria-label="Seção de Projetos em Destaque">
+      <div class="section-head">
         <h2>Projetos em Destaque</h2>
-        <ul>
-            <li><strong>SENAI - Técnico em Informática para Internet</strong>
-                <p>Desenvolvimento de uma API Financeira RESTful segura para transações financeiras.</p>
-            </li>
-            <li><strong>UFPI - Pesquisa de Mestrado</strong>
-                <p>Uso da acelerometria para estimar variações de volume e densidade em fluidos confinados.</p> 
-                <p>O estudo investiga dinâmicas e comportamentos estruturais utilizando técnicas avançadas de processamento de sinais e modelagem matemática.</p>
-            </li>
-            <li><strong>TRON Ensino de Robôtica Educativa</strong>
-                <p>Curso de Montagem, Manutenção e Impressão 3D, criando conteúdo educativo para iniciantes e profissionais.</p>
-            </li>
-        </ul>
+        <p class="subtitle">Algumas iniciativas acadêmicas e profissionais em andamento e/ou consolidadas.</p>
+      </div>
+
+      <div class="grid three">
+        <article class="card project">
+          <div class="badge">SENAI</div>
+          <h3>Técnico em Informática para Internet</h3>
+          <p class="text">
+            Desenvolvimento de uma API financeira RESTful segura, aplicada a cenários de transações financeiras,
+            com foco em arquitetura de software, autenticação e boas práticas de backend.
+          </p>
+        </article>
+
+        <article class="card project">
+          <div class="badge">UFPI</div>
+          <h3>Pesquisa de Mestrado</h3>
+          <p class="text">
+            Pesquisa aplicada voltada ao uso da acelerometria para estimativa de variações de volume e densidade em fluidos confinados,
+            investigando dinâmicas estruturais por meio de processamento de sinais, análise de vibrações e modelagem matemática.
+          </p>
+        </article>
+
+        <article class="card project">
+          <div class="badge">TRON</div>
+          <h3>Robótica Educativa & Impressão 3D</h3>
+          <p class="text">
+            Desenvolvimento e condução de cursos de montagem, manutenção e impressão 3D, com produção de conteúdo educacional
+            para iniciantes, técnicos e profissionais.
+          </p>
+        </article>
+      </div>
     </section>
-    
-    <section class="contact">
-        <h2>Contato</h2>
-        <a href="https://www.linkedin.com/in/hilton-elias/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/tomaszeswisc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://api.whatsapp.com/send?phone=5586999918440" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://www.instagram.com/hilton_elias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://lattes.cnpq.br/8511895897702246" target="_blank"><i class="fab fa-lattes"></i> Lattes</a>
-        <a href="mailto:tomaszeswisc@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+
+    <!-- Contato -->
+    <section class="section" id="contato" aria-label="Seção de Contato">
+      <div class="section-head">
+        <h2>Conecte-se comigo</h2>
+        <p class="subtitle">Links diretos para redes profissionais e canais de comunicação.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-btn" href="https://www.linkedin.com/in/hilton-elias/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a class="contact-btn" href="https://github.com/tomaszeswisc" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a class="contact-btn" href="https://api.whatsapp.com/send?phone=5586999918440" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="contact-btn" href="https://www.instagram.com/hilton_elias/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a class="contact-btn" href="https://lattes.cnpq.br/8511895897702246" target="_blank" rel="noopener">
+          <i class="fa-solid fa-graduation-cap"></i> Lattes
+        </a>
+        <a class="contact-btn" href="mailto:tomaszeswisc@gmail.com">
+          <i class="fa-solid fa-envelope"></i> E-mail
+        </a>
+      </div>
     </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Hilton Elias — Todos os direitos reservados.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
