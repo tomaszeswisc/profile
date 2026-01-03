@@ -29,6 +29,42 @@
     <i class="fa-solid fa-arrow-down"></i>
   </button>
 </div>
+
+<script>
+  const scrollUpBtn = document.getElementById("scrollUp");
+  const scrollDownBtn = document.getElementById("scrollDown");
+
+  let lastScrollY = window.scrollY;
+
+  function updateScrollButtons() {
+    const currentScroll = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (currentScroll > 200) {
+      scrollUpBtn.classList.add("show");
+    } else {
+      scrollUpBtn.classList.remove("show");
+    }
+
+    if (currentScroll < maxScroll - 200) {
+      scrollDownBtn.classList.add("show");
+    } else {
+      scrollDownBtn.classList.remove("show");
+    }
+
+    lastScrollY = currentScroll;
+  }
+
+  scrollUpBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  scrollDownBtn.addEventListener("click", () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateScrollButtons);
+</script>
   
 <body>
   <header class="hero" aria-label="Cabeçalho com apresentação">
@@ -264,40 +300,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const scrollUpBtn = document.getElementById("scrollUp");
-  const scrollDownBtn = document.getElementById("scrollDown");
-
-  let lastScrollY = window.scrollY;
-
-  function updateScrollButtons() {
-    const currentScroll = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-    if (currentScroll > 200) {
-      scrollUpBtn.classList.add("show");
-    } else {
-      scrollUpBtn.classList.remove("show");
-    }
-
-    if (currentScroll < maxScroll - 200) {
-      scrollDownBtn.classList.add("show");
-    } else {
-      scrollDownBtn.classList.remove("show");
-    }
-
-    lastScrollY = currentScroll;
-  }
-
-  scrollUpBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  scrollDownBtn.addEventListener("click", () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateScrollButtons);
   </script>
 </body>
 </html>
