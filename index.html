@@ -19,42 +19,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-  <script>
-  const scrollUpBtn = document.getElementById("scrollUp");
-  const scrollDownBtn = document.getElementById("scrollDown");
-
-  let lastScrollY = window.scrollY;
-
-  function updateScrollButtons() {
-    const currentScroll = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-    if (currentScroll > 200) {
-      scrollUpBtn.classList.add("show");
-    } else {
-      scrollUpBtn.classList.remove("show");
-    }
-
-    if (currentScroll < maxScroll - 200) {
-      scrollDownBtn.classList.add("show");
-    } else {
-      scrollDownBtn.classList.remove("show");
-    }
-
-    lastScrollY = currentScroll;
-  }
-
-  scrollUpBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  scrollDownBtn.addEventListener("click", () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateScrollButtons);
-</script>
-
 <body>
 
 <!-- Scroll Navigation Buttons -->
@@ -400,5 +364,43 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  
+  <script>
+  const scrollUpBtn = document.getElementById("scrollUp");
+  const scrollDownBtn = document.getElementById("scrollDown");
+
+  let lastScrollY = window.scrollY;
+
+  function updateScrollButtons() {
+    const currentScroll = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (currentScroll > 200) {
+      scrollUpBtn.classList.add("show");
+    } else {
+      scrollUpBtn.classList.remove("show");
+    }
+
+    if (currentScroll < maxScroll - 200) {
+      scrollDownBtn.classList.add("show");
+    } else {
+      scrollDownBtn.classList.remove("show");
+    }
+
+    lastScrollY = currentScroll;
+  }
+
+  scrollUpBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  scrollDownBtn.addEventListener("click", () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateScrollButtons);
+</script>
+
 </body>
 </html>
