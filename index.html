@@ -34,7 +34,7 @@
 
  
   <header class="hero" aria-label="Cabeçalho com apresentação">
-    <video class="hero-video" autoplay loop muted playsinline>
+    <video class="hero-video" autoplay loop muted playsinline aria-hidden="true">
       <source src="header.mp4" type="video/mp4" />
       Seu navegador não suporta vídeos em HTML5.
     </video>
@@ -94,7 +94,7 @@
         <div class="card">
           <h3>Resumo profissional</h3>
           <p class="text">
-            tuo com desenvolvimento de software, robótica educativa e manufatura aditiva, com forte foco em formação técnica e criação de materiais didáticos. No Mestrado, desenvolvo pesquisa aplicada em acelerometria e análise de vibrações.
+            Atuo com desenvolvimento de software, robótica educativa e manufatura aditiva, com forte foco em formação técnica e criação de materiais didáticos. No mestrado, desenvolvo pesquisa aplicada em acelerometria e análise de vibrações.
           </p>
         </div>
       </div>
@@ -305,7 +305,6 @@
     <li>Ética</li>
     <li>Responsabilidade Técnica</li>
     <li>Compromisso com a Educação</li>
-    <li>Aprendizado Contínuo</li>
     <li>Inovação com Aplicação Real</li>
   </ul>
 </section>
@@ -361,46 +360,7 @@
     </footer>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-  
-  <script>
-  const scrollUpBtn = document.getElementById("scrollUp");
-  const scrollDownBtn = document.getElementById("scrollDown");
-
-  let lastScrollY = window.scrollY;
-
-  function updateScrollButtons() {
-    const currentScroll = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-    if (currentScroll > 200) {
-      scrollUpBtn.classList.add("show");
-    } else {
-      scrollUpBtn.classList.remove("show");
-    }
-
-    if (currentScroll < maxScroll - 200) {
-      scrollDownBtn.classList.add("show");
-    } else {
-      scrollDownBtn.classList.remove("show");
-    }
-
-    lastScrollY = currentScroll;
-  }
-
-  scrollUpBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  scrollDownBtn.addEventListener("click", () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateScrollButtons);
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>
