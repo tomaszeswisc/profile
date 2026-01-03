@@ -281,7 +281,7 @@ body{
   margin-bottom: 10px;
 }
 
-/* Contact */
+/* Contact 
 .contact-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -309,6 +309,7 @@ body{
   background: rgba(255,255,255,0.14);
   border-color: rgba(255,255,255,0.20);
 }
+*/
 
 /* CONTACT ICONS — estilo mais elegante */
 .section-head.center {
